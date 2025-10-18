@@ -66,15 +66,6 @@
       backdrop-filter: blur(6px);
       margin-top: 50px;
     }
-
-    /* Logo styling */
-    .logo {
-      width: 150px;
-      height: 150px;
-      object-fit: contain;
-      margin: 0 auto 20px auto;
-      display: block;
-    }
   </style>
 </head>
 
@@ -84,7 +75,11 @@
     <!-- Header -->
     <header class="bg-white/80 backdrop-blur-sm border-b shadow-sm sticky top-0 z-50">
       <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <h1 class="text-2xl md:text-3xl font-extrabold text-emerald-700">Project Zero Plastic</h1>
+        <div class="flex items-center space-x-3">
+          <!-- Logo -->
+          <img src="logo.png" alt="Project Zero Plastic Logo" class="h-10 w-10 object-contain">
+          <h1 class="text-2xl md:text-3xl font-extrabold text-emerald-700">Project Zero Plastic</h1>
+        </div>
         <p class="text-sm text-emerald-600">Together for a Plastic-Free Future</p>
       </div>
     </header>
@@ -92,9 +87,6 @@
     <!-- Hero / Introduction -->
     <section class="section text-center">
       <div class="card">
-        <!-- ✅ LOGO ADDED HERE -->
-        <img src="Untitled design.png" alt="Project Zero Plastic Logo" class="logo">
-
         <h1 class="text-4xl font-bold text-emerald-700 mb-4">Project Zero Plastic</h1>
         <p class="text-gray-700 text-lg mb-4">
           Plastic pollution is one of the most urgent environmental challenges of our time.
