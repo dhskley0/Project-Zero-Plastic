@@ -1,216 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Project Zero Plastic — Awareness</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
     body {
-      font-family: 'Inter', sans-serif;
-      color: #064e3b;
-      line-height: 1.7;
-      margin: 0;
-      padding: 0;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Poppins', sans-serif;
     }
-
-    /* Background video */
-    video.bg-video {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1;
-      filter: brightness(60%);
+    section {
+      backdrop-filter: blur(5px);
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 1rem;
+      margin: 2rem auto;
+      padding: 2rem;
+      max-width: 900px;
     }
-
-    .overlay {
-      background: rgba(255, 255, 255, 0.8);
-      min-height: 100vh;
-    }
-
-    .section {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 60px 20px;
-    }
-
-    .card {
-      background: rgba(255, 255, 255, 0.95);
-      border-radius: 16px;
-      padding: 30px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-      backdrop-filter: blur(10px);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
-    }
-
-    h1, h2 {
-      font-weight: 700;
+    h1, h2, h3 {
       color: #065f46;
+      font-weight: 700;
     }
-
-    h1 {
-      font-size: 2.5rem;
-    }
-
-    h2 {
-      font-size: 1.8rem;
-      margin-bottom: 15px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
     p {
       color: #064e3b;
-      margin-top: 10px;
     }
-
-    strong {
-      color: #047857;
-    }
-
-    footer {
-      text-align: center;
-      color: #064e3b;
-      padding: 30px;
-      font-size: 0.9rem;
-      opacity: 0.85;
-      background: rgba(255, 255, 255, 0.85);
-      backdrop-filter: blur(6px);
-      margin-top: 50px;
-    }
-
-    .icon {
-      width: 28px;
-      height: 28px;
-      color: #10b981;
-      flex-shrink: 0;
-    }
-
     .counter {
-      font-size: 2.5rem;
+      font-size: 2rem;
       font-weight: bold;
       color: #047857;
-    }
-
-    iframe {
-      border-radius: 12px;
-      width: 100%;
-      height: 400px;
     }
   </style>
 </head>
 
-<body>
-  <!-- Ocean Background Video -->
-  <video autoplay muted loop playsinline class="bg-video">
-    <source src="ocean.mp4" type="video/mp4" />
-  </video>
+<body class="text-center">
+  <!-- Header -->
+  <header class="py-10 text-white bg-emerald-700 bg-opacity-80">
+    <h1 class="text-4xl font-bold">🌍 Project Zero Plastic</h1>
+    <p class="text-lg mt-2">Spreading awareness and promoting sustainable actions for a plastic-free future.</p>
+  </header>
 
-  <div class="overlay">
+  <!-- Awareness Section -->
+  <section>
+    <h2 class="text-3xl mb-4">Plastic Pollution Awareness</h2>
+    <p>
+      Every year, the world produces over <strong>380 million tons</strong> of plastic — and much of it ends up in oceans, rivers, and landfills.
+      Plastic pollution affects marine life, human health, and contributes to climate change. 
+      The goal of Project Zero Plastic is to inspire people to reduce plastic use and support sustainable alternatives.
+    </p>
+    <br />
+    <p>
+      🌿 Together, we can start with small steps — saying no to single-use plastics, bringing reusable bags, and spreading awareness in our communities.
+    </p>
+  </section>
 
-    <!-- Header -->
-    <header class="bg-white/80 backdrop-blur-sm border-b shadow-sm sticky top-0 z-50">
-      <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <div class="flex items-center space-x-3">
-          <img src="logo.png" alt="Project Zero Plastic Logo" class="h-10 w-10 object-contain">
-          <h1 class="text-2xl md:text-3xl font-extrabold text-emerald-700">Project Zero Plastic</h1>
-        </div>
-        <p class="text-sm text-emerald-600 font-medium">Together for a Plastic-Free Future</p>
-      </div>
-    </header>
+  <!-- What is Plastic Pollution Section -->
+  <section>
+    <h2 class="text-3xl mb-4">🌊 What is Plastic Pollution?</h2>
+    <p>
+      Plastic pollution occurs when plastic materials accumulate in the environment, harming ecosystems, animals, and humans.
+      Most plastics are non-biodegradable, lasting hundreds of years and breaking down into microplastics that infiltrate water, soil, and air.
+    </p>
+  </section>
 
-    <!-- Hero Section -->
-    <section class="section text-center">
-      <div class="card">
-        <h1 class="text-4xl font-bold text-emerald-700 mb-4">🌍 Project Zero Plastic</h1>
-        <p class="text-gray-700 text-lg mb-4">
-          Plastic pollution is one of the greatest environmental challenges of our time. 
-          <strong>Project Zero Plastic</strong> raises awareness, inspires sustainable choices, 
-          and empowers communities to reduce plastic waste and protect marine life.
-        </p>
-        <p class="text-emerald-600 font-semibold text-lg">Reduce plastic. Restore the planet. 🌿</p>
-      </div>
-    </section>
- 
-    <!-- Awareness / Education Sections -->
-    <section class="section">
-      <div class="card">
-        <h2>🌊 What is Plastic Pollution?</h2>
-        <p>Plastic pollution occurs when plastic materials accumulate in the environment, harming ecosystems, animals, and humans. Most plastics are non-biodegradable, lasting hundreds of years and breaking down into microplastics that infiltrate water, soil, and air.</p>
-      </div>
-    </section>
+  <!-- Solutions and Daily Actions Section -->
+  <section>
+    <h2 class="text-3xl mb-4">♻️ Solutions and Daily Actions</h2>
+    <ul class="text-left list-disc list-inside space-y-2">
+      <li><strong>Reduce:</strong> Avoid single-use plastics whenever possible.</li>
+      <li><strong>Reuse:</strong> Bring your own bottles, containers, and eco-bags.</li>
+      <li><strong>Recycle:</strong> Properly sort and dispose of waste.</li>
+      <li>Support eco-friendly businesses and join cleanup drives.</li>
+    </ul>
+    <p class="mt-4 italic text-emerald-700">Awareness is the first step — action makes change.</p>
+  </section>
 
-    <!-- Solutions -->
-    <section class="section">
-      <div class="card">
-        <h2>♻️ Solutions and Daily Actions</h2>
-        <p><strong>Reduce:</strong> Avoid single-use plastics whenever possible.</p>
-        <p><strong>Reuse:</strong> Bring your own bottles, containers, and eco-bags.</p>
-        <p><strong>Recycle:</strong> Properly sort and dispose of waste.</p>
-        <p>Support eco-friendly businesses and join cleanup drives. Awareness is the first step — action makes change.</p>
-      </div>
-    </section>
-    
-   <!-- Statistics Section -->
-    <section class="section text-center">
-      <div class="card">
-        <h2>📊 The Numbers Don’t Lie</h2>
-        <p>Plastic waste generated globally this year:</p>
-        <div id="plastic-counter" class="counter">0</div>
-        <p class="text-sm text-gray-600">tons of plastic and counting...</p>
-      </div>
-    </section>
+  <!-- Updated Plastic Waste Statistics -->
+  <section>
+    <h2 class="text-3xl mb-4">📊 Plastic Waste Statistics</h2>
+    <div class="text-left space-y-3">
+      <p><strong>🌏 Worldwide:</strong> Over 400 million tons of plastic waste are produced each year, and only 9% is recycled.</p>
+      <p><strong>🇵🇭 Philippines:</strong> Around 2.7 million tons of plastic waste are generated annually, with 20% ending up in the ocean.</p>
+      <p><strong>🏝 Provinces & Cities:</strong> Metro Manila contributes about 25% of total plastic waste, followed by Cebu and Davao.</p>
+      <p><strong>🏡 Barangays:</strong> Each barangay produces an average of 1–3 tons of plastic waste monthly, mostly from single-use plastics.</p>
+    </div>
+  </section>
 
-    <!-- Laws Section -->
-    <section class="section">
-      <div class="card">
-        <h2>⚖️ Philippine Environmental Laws</h2>
-        <p><strong>Republic Act No. 9003</strong> — Ecological Solid Waste Management Act of 2000 promotes proper waste segregation, recycling, and composting.</p>
-        <p><strong>Republic Act No. 9275</strong> — Clean Water Act of 2004 aims to protect water bodies from pollution from land-based sources.</p>
-        <p><strong>Republic Act No. 8749</strong> — Clean Air Act ensures the maintenance of clean air by regulating emissions from industries and vehicles.</p>
-        <p><strong>Republic Act No. 11898</strong> — Extended Producer Responsibility (EPR) Act of 2022 requires companies to manage their plastic waste properly.</p>
-      </div>
-    </section>
+  <!-- Counter Section -->
+  <section>
+    <h2 class="text-3xl mb-4">♻️ Plastic Waste Counter</h2>
+    <p>Estimated plastic produced worldwide since you opened this page:</p>
+    <div id="counter" class="counter mt-4">0 kg</div>
+  </section>
 
-    <!-- Google Map -->
-    <section class="section text-center">
-      <div class="card">
-        <h2>📍 Pangasinan, Philippines</h2>
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d491812.52333744484!2d119.70451972484493!3d15.901229391129364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3393d4e8a48a4fdb%3A0x9a6b6767ef1aef29!2sPangasinan!5e0!3m2!1sen!2sph!4v1739070529129!5m2!1sen!2sph" 
-          allowfullscreen="" loading="lazy">
-        </iframe>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-      💚 Project Zero Plastic — Awareness Campaign | Together for a Plastic-Free Future
-    </footer>
-  </div>
-
-  <!-- Plastic Counter Script -->
   <script>
-    const counter = document.getElementById('plastic-counter');
+    // Plastic Counter Script
     let count = 0;
-    const speed = 250;
-    function updateCounter() {
-      count += Math.floor(Math.random() * 10) + 5;
-      counter.innerText = count.toLocaleString();
-      setTimeout(updateCounter, speed);
-    }
-    updateCounter();
+    const counter = document.getElementById('counter');
+    setInterval(() => {
+      count += 50; // approx. rate per second globally
+      counter.textContent = count.toLocaleString() + ' kg';
+    }, 1000);
   </script>
+
+  <!-- Laws Section -->
+  <section>
+    <h2 class="text-3xl mb-4">🧾 Philippine Environmental Laws</h2>
+    <ul class="text-left list-disc list-inside">
+      <li><strong>RA 9003</strong> — Ecological Solid Waste Management Act of 2000</li>
+      <li><strong>RA 8749</strong> — Clean Air Act of 1999</li>
+      <li><strong>RA 9275</strong> — Clean Water Act of 2004</li>
+      <li><strong>RA 9729</strong> — Climate Change Act of 2009</li>
+      <li><strong>RA 9512</strong> — Environmental Awareness and Education Act of 2008</li>
+    </ul>
+  </section>
+
+  <!-- Map Section -->
+  <section>
+    <h2 class="text-3xl mb-4">📍 Map: Pangasinan, Philippines</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d61507.7727426424!2d120.3333!3d15.8949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sph!4v1761130529129!5m2!1sen!2sph"
+      width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 bg-emerald-800 bg-opacity-80 text-white">
+    <p> Project Zero Plastic | © 2025</p>
+  </footer>
 </body>
 </html>
