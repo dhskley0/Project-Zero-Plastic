@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -7,21 +7,38 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
     body {
       font-family: 'Inter', sans-serif;
       color: #064e3b;
       line-height: 1.7;
-      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
     }
+
+    /* Background video */
+    video.bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      filter: brightness(60%);
+    }
+
     .overlay {
-      background: rgba(255, 255, 255, 0.75);
+      background: rgba(255, 255, 255, 0.8);
       min-height: 100vh;
     }
+
     .section {
       max-width: 1000px;
       margin: 0 auto;
       padding: 60px 20px;
     }
+
     .card {
       background: rgba(255, 255, 255, 0.95);
       border-radius: 16px;
@@ -30,18 +47,38 @@
       backdrop-filter: blur(10px);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
     .card:hover {
       transform: translateY(-5px);
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
     }
+
     h1, h2 {
       font-weight: 700;
       color: #065f46;
     }
-    h1 { font-size: 2.5rem; }
-    h2 { font-size: 1.8rem; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
-    p { color: #064e3b; margin-top: 10px; }
-    strong { color: #047857; }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    p {
+      color: #064e3b;
+      margin-top: 10px;
+    }
+
+    strong {
+      color: #047857;
+    }
+
     footer {
       text-align: center;
       color: #064e3b;
@@ -52,20 +89,33 @@
       backdrop-filter: blur(6px);
       margin-top: 50px;
     }
-    .icon { width: 28px; height: 28px; color: #10b981; flex-shrink: 0; }
+
+    .icon {
+      width: 28px;
+      height: 28px;
+      color: #10b981;
+      flex-shrink: 0;
+    }
+
+    .counter {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #047857;
+    }
+
+    iframe {
+      border-radius: 12px;
+      width: 100%;
+      height: 400px;
+    }
   </style>
 </head>
 
 <body>
-
-  <!-- Background Video -->
-  <video autoplay loop muted playsinline class="fixed top-0 left-0 w-full h-full object-cover -z-10">
-    <source src="ocean.mp4" type="video/mp4">
-    Your browser does not support the video tag.
+  <!-- Ocean Background Video -->
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="ocean.mp4" type="video/mp4" />
   </video>
-
-  <!-- Dark Overlay -->
-  <div class="absolute top-0 left-0 w-full h-full bg-black/30 -z-10"></div>
 
   <div class="overlay">
 
@@ -83,7 +133,7 @@
     <!-- Hero Section -->
     <section class="section text-center">
       <div class="card">
-        <h1 class="text-4xl font-bold text-emerald-700 mb-4">Project Zero Plastic</h1>
+        <h1 class="text-4xl font-bold text-emerald-700 mb-4">🌍 Project Zero Plastic</h1>
         <p class="text-gray-700 text-lg mb-4">
           Plastic pollution is one of the greatest environmental challenges of our time. 
           <strong>Project Zero Plastic</strong> raises awareness, inspires sustainable choices, 
@@ -92,52 +142,75 @@
         <p class="text-emerald-600 font-semibold text-lg">Reduce plastic. Restore the planet. 🌿</p>
       </div>
     </section>
-
-    <!-- Global & Local Statistics -->
+ 
+    <!-- Awareness / Education Sections -->
     <section class="section">
       <div class="card">
-        <h2>🌍 Plastic Waste Statistics</h2>
-        <p><strong>Worldwide:</strong> Over 400 million tons of plastic waste are produced each year, and only 9% is recycled.</p>
-        <p><strong>Philippines:</strong> Around 2.7 million tons of plastic waste are generated annually, with 20% ending up in the ocean.</p>
-        <p><strong>Provinces & Cities:</strong> Metro Manila contributes about 25% of total plastic waste, followed by Cebu and Davao.</p>
-        <p><strong>Barangays:</strong> Each barangay produces an average of 1–3 tons of plastic waste monthly, mostly from single-use plastics.</p>
+        <h2>🌊 What is Plastic Pollution?</h2>
+        <p>Plastic pollution occurs when plastic materials accumulate in the environment, harming ecosystems, animals, and humans. Most plastics are non-biodegradable, lasting hundreds of years and breaking down into microplastics that infiltrate water, soil, and air.</p>
       </div>
     </section>
 
-    <!-- Laws -->
+    <!-- Solutions -->
     <section class="section">
       <div class="card">
-        <h2>⚖️ Existing Laws on Plastic Pollution</h2>
-        <p><strong>Republic Act No. 9003</strong> — The Ecological Solid Waste Management Act of 2000: promotes waste segregation, recycling, and composting.</p>
-        <p><strong>House Bill No. 9147</strong> — Proposed Single-Use Plastic Regulation Act: aims to phase out and ban single-use plastics nationwide.</p>
-        <p><strong>Local Ordinances:</strong> Many LGUs already ban plastic bags and straws in markets, stores, and food stalls.</p>
+        <h2>♻️ Solutions and Daily Actions</h2>
+        <p><strong>Reduce:</strong> Avoid single-use plastics whenever possible.</p>
+        <p><strong>Reuse:</strong> Bring your own bottles, containers, and eco-bags.</p>
+        <p><strong>Recycle:</strong> Properly sort and dispose of waste.</p>
+        <p>Support eco-friendly businesses and join cleanup drives. Awareness is the first step — action makes change.</p>
+      </div>
+    </section>
+    
+   <!-- Statistics Section -->
+    <section class="section text-center">
+      <div class="card">
+        <h2>📊 The Numbers Don’t Lie</h2>
+        <p>Plastic waste generated globally this year:</p>
+        <div id="plastic-counter" class="counter">0</div>
+        <p class="text-sm text-gray-600">tons of plastic and counting...</p>
       </div>
     </section>
 
-    <!-- Interactive Map Placeholder -->
+    <!-- Laws Section -->
     <section class="section">
-      <div class="card text-center">
-        <h2>🗺️ Local Impact Map</h2>
-        <p>Explore areas most affected by plastic pollution. This interactive map shows plastic waste levels across Philippine provinces and coastal cities.</p>
-        <div class="mt-6 w-full h-80 bg-emerald-100 flex items-center justify-center text-emerald-700 rounded-lg border">
-          <p>[Interactive Map Placeholder]</p>
-        </div>
+      <div class="card">
+        <h2>⚖️ Philippine Environmental Laws</h2>
+        <p><strong>Republic Act No. 9003</strong> — Ecological Solid Waste Management Act of 2000 promotes proper waste segregation, recycling, and composting.</p>
+        <p><strong>Republic Act No. 9275</strong> — Clean Water Act of 2004 aims to protect water bodies from pollution from land-based sources.</p>
+        <p><strong>Republic Act No. 8749</strong> — Clean Air Act ensures the maintenance of clean air by regulating emissions from industries and vehicles.</p>
+        <p><strong>Republic Act No. 11898</strong> — Extended Producer Responsibility (EPR) Act of 2022 requires companies to manage their plastic waste properly.</p>
       </div>
     </section>
 
-    <!-- Join the Movement -->
-    <section id="join" class="section">
-      <div class="card text-center">
-        <h2>🤝 Join the Movement</h2>
-        <p>Be part of the change! Join our beach clean-ups, awareness campaigns, and online challenges.</p>
-        <p class="font-semibold text-emerald-700 mt-3">Let’s turn awareness into action — one step, one refill, one choice at a time.</p>
+    <!-- Google Map -->
+    <section class="section text-center">
+      <div class="card">
+        <h2>📍 Pangasinan, Philippines</h2>
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d491812.52333744484!2d119.70451972484493!3d15.901229391129364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3393d4e8a48a4fdb%3A0x9a6b6767ef1aef29!2sPangasinan!5e0!3m2!1sen!2sph!4v1739070529129!5m2!1sen!2sph" 
+          allowfullscreen="" loading="lazy">
+        </iframe>
       </div>
     </section>
 
     <!-- Footer -->
     <footer>
-      Project Zero Plastic — Awareness Campaign | Together for a Plastic-Free Future
+      💚 Project Zero Plastic — Awareness Campaign | Together for a Plastic-Free Future
     </footer>
   </div>
+
+  <!-- Plastic Counter Script -->
+  <script>
+    const counter = document.getElementById('plastic-counter');
+    let count = 0;
+    const speed = 250;
+    function updateCounter() {
+      count += Math.floor(Math.random() * 10) + 5;
+      counter.innerText = count.toLocaleString();
+      setTimeout(updateCounter, speed);
+    }
+    updateCounter();
+  </script>
 </body>
 </html>
