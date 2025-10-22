@@ -1,28 +1,25 @@
-# 🌍 Project Zero Plastic
+🌍 Project Zero Plastic
 
-**Project Zero Plastic** is an awareness campaign website about plastic pollution, sustainability, and environmental action.  
-This page aims to educate viewers on the impact of plastic waste and encourage small daily habits that lead to big change.
+Project Zero Plastic is an awareness campaign website focused on plastic pollution, sustainability, and collective environmental action.
+This project aims to educate viewers about the impact of plastic waste and inspire small daily habits that create big change for our planet. 🌎
 
----
+♻️ Purpose
 
-## ♻️ Purpose
-To spread awareness about the dangers of plastic pollution and promote eco-friendly alternatives that reduce waste.
+To spread awareness of the dangers of plastic pollution and promote eco-friendly alternatives that help reduce global waste and protect marine life.
 
----
+🌿 Features
 
-## 🌿 Features
-- Informative sections about plastic pollution  
-- Solutions and daily actions to reduce plastic use  
-- Clean, scrolling web layout with a natural background  
+✅ Informative sections on the causes and effects of plastic pollution
+✅ Practical solutions and daily eco-actions
+✅ Clean, scroll-based web layout with an ocean-inspired background video
+✅ Includes statistics, laws, and local impact data to raise awareness
 
----
+🔗 Live Website
 
-## 🔗 Live Website
-Visit the page here:  
-👉 [https://dhskley0.github.io/Project-Zero-Waste/](https://dhskley0.github.io/Project-Zero-Waste/)
+Visit the project here:
+👉 https://dhskley0.github.io/Project-Zero-Waste/
 
----
+💚 Credits
 
-## 💚 Credits
-Created by **TEAMPZP**  
-Made for environmental awareness and school project presentation.
+👩‍💻 Created by Team PZP
+🎯 Made for environmental awareness
